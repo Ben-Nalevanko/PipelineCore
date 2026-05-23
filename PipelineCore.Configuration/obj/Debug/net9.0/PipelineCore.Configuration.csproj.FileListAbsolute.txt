@@ -1,0 +1,11 @@
+/home/ben/PipelineCore/PipelineCore.Configuration/bin/Debug/net9.0/PipelineCore.Configuration.deps.json
+/home/ben/PipelineCore/PipelineCore.Configuration/bin/Debug/net9.0/PipelineCore.Configuration.dll
+/home/ben/PipelineCore/PipelineCore.Configuration/bin/Debug/net9.0/PipelineCore.Configuration.pdb
+/home/ben/PipelineCore/PipelineCore.Configuration/obj/Debug/net9.0/PipelineCore.Configuration.GeneratedMSBuildEditorConfig.editorconfig
+/home/ben/PipelineCore/PipelineCore.Configuration/obj/Debug/net9.0/PipelineCore.Configuration.AssemblyInfoInputs.cache
+/home/ben/PipelineCore/PipelineCore.Configuration/obj/Debug/net9.0/PipelineCore.Configuration.AssemblyInfo.cs
+/home/ben/PipelineCore/PipelineCore.Configuration/obj/Debug/net9.0/PipelineCore.Configuration.csproj.CoreCompileInputs.cache
+/home/ben/PipelineCore/PipelineCore.Configuration/obj/Debug/net9.0/PipelineCore.Configuration.dll
+/home/ben/PipelineCore/PipelineCore.Configuration/obj/Debug/net9.0/refint/PipelineCore.Configuration.dll
+/home/ben/PipelineCore/PipelineCore.Configuration/obj/Debug/net9.0/PipelineCore.Configuration.pdb
+/home/ben/PipelineCore/PipelineCore.Configuration/obj/Debug/net9.0/ref/PipelineCore.Configuration.dll
