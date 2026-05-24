@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="PipelineExecution.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../PipelineCore.Abstractions/PipelineCore.Abstractions.csproj" />
+    <ProjectReference Include="../PipelineCore.Domain/PipelineCore.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
