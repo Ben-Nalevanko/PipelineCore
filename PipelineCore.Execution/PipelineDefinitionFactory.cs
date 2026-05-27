@@ -4,9 +4,9 @@ using PipelineCore.Domain;
 
 namespace PipelineCore.Execution;
 
-public class PipelineDefinitionFactory
+public static class PipelineDefinitionFactory
 {
-    public PipelineDefinition CreatePipelineDefinition(IConfigData configData, IValidator validator)
+    public static PipelineDefinition? CreatePipelineDefinition(IConfigData configData, IValidator validator)
     {
         if(configData == null)
         {
@@ -19,7 +19,7 @@ public class PipelineDefinitionFactory
 
         if (!validator.ValidateConfiguration(configData))
         {
-            throw new ArgumentException("Invalid configuration data.");
+            return null;
         }
 
         // Temporary for MVP, flesh out logic later

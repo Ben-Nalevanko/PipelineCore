@@ -7,12 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="PipelineExecution.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="../PipelineCore.Abstractions/PipelineCore.Abstractions.csproj" />
+    <ProjectReference Include="../PipelineCore.Configuration/PipelineCore.Configuration.csproj" />
     <ProjectReference Include="../PipelineCore.Domain/PipelineCore.Domain.csproj" />
+    <ProjectReference Include="../PipelineCore.Engine/PipelineCore.Engine.csproj" />
   </ItemGroup>
 
 </Project>

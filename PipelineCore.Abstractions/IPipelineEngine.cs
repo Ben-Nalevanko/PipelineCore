@@ -1,10 +1,12 @@
 using PipelineCore.Domain;
+using System;
 
 namespace PipelineCore.Abstractions;
 
 public interface IPipelineEngine
 { 
     PipelineExecution pipelineExecution {get; set;}
-    PipelineDefinition pipelineDefinition {get; set;}
-    bool ExecutePipeline();
+    PipelineDefinition pipelineDefinition {get; }
+
+    Task ExecuteAsync(PipelineExecution execution);
 }
