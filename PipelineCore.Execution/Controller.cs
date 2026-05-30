@@ -14,6 +14,7 @@ public class Controller
     private List<IPipelineEngine> activeExecutions;
     private CancellationTokenSource cancellationTokenSource;
     private CancellationToken cancellationToken;
+    private readonly object lockObject = new();
 
     public Controller()
     {
@@ -40,8 +41,7 @@ public class Controller
             {
                 Task.Run(() =>
                 {
-                    activeExecutions.Add(pipelineEngine);
-
+                    AddPipeline(pipelineEngine);
                     try
                     {
                         pipelineEngine.ExecutePipeline(cancellationToken);
@@ -51,7 +51,7 @@ public class Controller
                         Console.WriteLine($"Pipeline execution failed: {ex.Message}");
 
                     }
-                    activeExecutions.Remove(pipelineEngine);
+                    RemovePipeline(pipelineEngine);
                 });
             }
             else
@@ -64,9 +64,30 @@ public class Controller
             throw new Exception("Failed to initialize configuration loader.");
         }
     }
-    
+
     public void Execute(string filepath)
     {
         StartPipelineExecution(filepath);
+    }
+
+    public void StopAllPipelines()
+    {
+        cancellationTokenSource.Cancel();
+        Console.WriteLine("All pipelines have been stopped.");
+    }
+
+    private void AddPipeline(IPipelineEngine pipelineEngine)
+    {
+        lock (lockObject)
+        {
+            activeExecutions.Add(pipelineEngine);
+        }
+    }
+    private void RemovePipeline(IPipelineEngine pipelineEngine)
+    {
+        lock (lockObject)
+        {
+            activeExecutions.Remove(pipelineEngine);
+        }
     }
 }
