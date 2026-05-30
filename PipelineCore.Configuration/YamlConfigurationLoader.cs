@@ -9,7 +9,7 @@ public class YamlConfigurationLoader : IConfigurationLoader
     {
         // Implement YAML loading logic here
         // For now, return null or a mock IConfigData implementation
-        return null;
+        return new object() as IConfigData;
     }
 
     public IConfigData LoadConfiguration(Stream configStream)

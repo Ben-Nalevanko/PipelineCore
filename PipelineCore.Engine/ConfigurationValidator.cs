@@ -1,12 +1,14 @@
 using System;
 using PipelineCore.Abstractions;
+using PipelineCore.Domain;
+using PipelineCore.Domain.Enums;
 
 namespace PipelineCore.Engine;
 
 public class ConfigurationValidator : IValidator
 {
-    public bool ValidateConfiguration(IConfigData configData)
+    public ValidationResult ValidateConfiguration(IConfigData configData)
     {
-        return true; // Placeholder implementation
+        return new ValidationResult(ValidationStatus.None); // Placeholder implementation
     }
 }

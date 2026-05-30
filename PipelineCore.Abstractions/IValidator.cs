@@ -1,8 +1,9 @@
 using System;
+using PipelineCore.Domain;
 
 namespace PipelineCore.Abstractions;
 
 public interface IValidator
 {
-    bool ValidateConfiguration(IConfigData configData);
+    ValidationResult ValidateConfiguration(IConfigData configData);
 }

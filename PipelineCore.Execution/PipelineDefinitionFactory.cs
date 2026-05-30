@@ -1,12 +1,14 @@
 using System;
+using System.Security;
 using PipelineCore.Abstractions;
 using PipelineCore.Domain;
+using PipelineCore.Domain.Enums;
 
 namespace PipelineCore.Execution;
 
 public static class PipelineDefinitionFactory
 {
-    public static PipelineDefinition? CreatePipelineDefinition(IConfigData configData, IValidator validator)
+    public static PipelineDefinition CreatePipelineDefinition(IConfigData configData, IValidator validator)
     {
         if(configData == null)
         {
@@ -17,9 +19,9 @@ public static class PipelineDefinitionFactory
             throw new ArgumentNullException(nameof(validator));
         }
 
-        if (!validator.ValidateConfiguration(configData))
+        if (validator.ValidateConfiguration(configData).ValidationStatus != ValidationStatus.Valid)
         {
-            return null;
+            throw new Exception("PipelineDefinitionFactory.CreatePipelineDefinition: definition creation failed. Invalid configuration.");;
         }
 
         // Temporary for MVP, flesh out logic later
