@@ -28,7 +28,7 @@ public class Controller
         IConfigurationLoader configLoader = ConfigurationLoaderFactory.GetConfigurationLoader(filepath);
         if (configLoader != null)
         {
-            IConfigData configData = configLoader.LoadConfiguration(filepath);
+            ConfigData configData = configLoader.LoadConfiguration(filepath);
             ConfigurationValidator validator = new ConfigurationValidator();
 
             PipelineDefinition pipelineDefinition = PipelineDefinitionFactory.CreatePipelineDefinition(configData, validator);

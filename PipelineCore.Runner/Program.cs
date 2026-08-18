@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using PipelineCore.Execution;
+var controller = new Controller();
+controller.Execute("/home/ben/PipelineCore/PipelineCore.Runner/testconfig.json");

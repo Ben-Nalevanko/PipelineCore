@@ -1,10 +1,11 @@
 using System;
+using PipelineCore.Domain;
 
 namespace PipelineCore.Abstractions;
 
 public interface IConfigurationLoader
 {
-    public IConfigData LoadConfiguration(string filePath);
+    public ConfigData LoadConfiguration(string filePath);
 
-    public IConfigData LoadConfiguration(Stream configStream);
+    public ConfigData LoadConfiguration(Stream configStream);
 }

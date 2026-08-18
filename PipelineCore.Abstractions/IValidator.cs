@@ -5,5 +5,5 @@ namespace PipelineCore.Abstractions;
 
 public interface IValidator
 {
-    ValidationResult ValidateConfiguration(IConfigData configData);
+    ValidationResult ValidateConfiguration(ConfigData configData);
 }

@@ -8,7 +8,7 @@ namespace PipelineCore.Execution;
 
 public static class PipelineDefinitionFactory
 {
-    public static PipelineDefinition CreatePipelineDefinition(IConfigData configData, IValidator validator)
+    public static PipelineDefinition CreatePipelineDefinition(ConfigData configData, IValidator validator)
     {
         if(configData == null)
         {

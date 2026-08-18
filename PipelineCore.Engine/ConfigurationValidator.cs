@@ -7,7 +7,7 @@ namespace PipelineCore.Engine;
 
 public class ConfigurationValidator : IValidator
 {
-    public ValidationResult ValidateConfiguration(IConfigData configData)
+    public ValidationResult ValidateConfiguration(ConfigData configData)
     {
         return new ValidationResult(ValidationStatus.None); // Placeholder implementation
     }
